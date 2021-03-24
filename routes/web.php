@@ -15,6 +15,4 @@ use Illuminate\Http\Request;
 */
 Route::resource('mahasiswa', MahasiswaController::class);
 Route::get('/mahasiswa/cari','MahasiswaController@cari');
-// Route::get('/', function () {
-//     return view('welcome');
-// });
+Route::get('/',[MahasiswaController::class , 'index']);
