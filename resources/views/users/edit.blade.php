@@ -40,9 +40,16 @@ nput.<br><br>
  <input type="Jurusan" name="Jurusan" class="form-control" id="Jurusan" value="{{ $Mahasiswa->jurusan }}" aria-describedby="Jurusan" > 
  </div>
  <div class="form-group">
+ <label for="Email">Email</label> 
+ <input type="Email" name="Email" class="form-control" id="Email" value="{{ $Mahasiswa->Email }}" aria-describedby="Email" > 
+ </div>
+ <div class="form-group">
  <label for="No_Handphone">No_Handphone</label> 
- 
  <input type="No_Handphone" name="No_Handphone" class="form-control" id="No_Handphone" value="{{ $Mahasiswa->no_handphone }}" aria-describedby="No_Handphone" > 
+ </div>
+ <div class="form-group">
+ <label for="Tanggal_Lahir">Tanggal Lahir</label> 
+ <input type="Tanggal_Lahir" name="Tanggal_Lahir" class="form-control" id="Tanggal_Lahir" value="{{ $Mahasiswa->Tanggal_Lahir }}" aria-describedby="Tanggal_Lahir" > 
  </div>
  <button type="submit" class="btn btn-primary">Submit</button>
  </form>
