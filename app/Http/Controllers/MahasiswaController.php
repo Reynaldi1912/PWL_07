@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\Models\Mahasiswa;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class MahasiswaController extends Controller
 {
@@ -13,11 +14,15 @@ class MahasiswaController extends Controller
      */
     public function index()
     {
-        //fungsi eloquent menampilkan data menggunakan pagination
-        $mahasiswa = Mahasiswa::all(); // Mengambil semua isi tabel
-        $posts = Mahasiswa::orderBy('nim', 'desc')->paginate(6);
-        return view('users.index', compact('mahasiswa'));
-        with('i', (request()->input('page', 1) - 1) * 5);
+        // fungsi eloquent menampilkan data menggunakan pagination
+        // $mahasiswa = Mahasiswa::all(); // Mengambil semua isi tabel
+        $mahasiswa = DB::table('mahasiswa')->simplePaginate(5);
+    	        // mengirim data pegawai ke view index
+		return view('users.index',['mahasiswa' => $mahasiswa]);
+
+        // $posts = Mahasiswa::orderBy('nim')->paginate(6);
+        // return view('users.index', compact('mahasiswa'));
+        // with('i', (request()->input('page', 1) - 1) * 5);
 
     }
 

@@ -52,3 +52,5 @@
  </tr>
  @endforeach
  </table>
+ {{ $mahasiswa->links() }}
+
