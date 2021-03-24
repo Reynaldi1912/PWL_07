@@ -16,7 +16,11 @@
  <p>{{ $message }}</p>
  </div>
  @endif
- 
+ <p>Cari Data Mahasiswa :</p>
+	<form action="/mahasiswa/cari" method="GET">
+		<input type="text" name="cari" placeholder="Cari Mahasiswa">
+		<input type="submit" value="cari">
+	</form>
  <table class="table table-bordered">
  <tr>
  <th>Nim</th>
