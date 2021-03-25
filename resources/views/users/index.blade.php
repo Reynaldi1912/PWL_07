@@ -6,24 +6,24 @@
  <h2>JURUSAN TEKNOLOGI INFORMASI-POLITEKNIK NEGERI MALANG</h2>
  </div>
  <div>
- <div class="float-left my-2">
+ <div class="float-right my-2">
  <a class="btn btn-success" href="{{ route('mahasiswa.create') }}"> Input Mahasiswa</a>
  </div>
- <div>
+ 	<div>
         <div class="mx-auto pull-right">
-            <div class="">
+            <div class="float-left">
                 <form action="{{ route('mahasiswa.index') }}" method="GET" role="search">
                     <div class="input-group">
                         <span class="input-group-btn mr-5 mt-1">
-                            <button class="btn btn-info" type="submit" title="Search projects">
-                                <span class="fas fa-search"></span>
+                            <button class="btn btn-info" type="submit" title="Search Mahasiswa">
+                                <span class="fas fa-search">Search</span>
                             </button>
                         </span>
-                        <input type="text" class="form-control mr-2" name="term" placeholder="Search projects" id="term">
+                        <input type="text" class="form-control mr-2" name="term" placeholder="Search Nama Mahasiswa" id="term">
                         <a href="{{ route('mahasiswa.index') }}" class=" mt-1">
                             <span class="input-group-btn">
                                 <button class="btn btn-danger" type="button" title="Refresh page">
-                                    <span class="fas fa-sync-alt"></span>
+                                    <span class="fas fa-sync-alt">Refresh</span>
                                 </button>
                             </span>
                         </a>
