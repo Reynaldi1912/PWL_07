@@ -14,7 +14,6 @@ class MahasiswaController extends Controller
      */
     public function index(Request $request)
     {
-        $mahasiswa1 = DB::table('mahasiswa')->simplePaginate(5);	   
         $mahasiswa = Mahasiswa::where([
             ['nama','!=',Null],
             [function($query)use($request){
@@ -24,7 +23,7 @@ class MahasiswaController extends Controller
             }]
         ])
         ->orderBy('nim','desc')
-        ->paginate(5);
+        ->simplePaginate(5);
         
         return view('users.index' , compact('mahasiswa'))
         ->with('i',(request()->input('page',1)-1)*5);
